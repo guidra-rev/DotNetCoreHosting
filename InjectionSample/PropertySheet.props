@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <NetHostPathx64>C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Host.win-x64\3.1.0\runtimes\win-x64\native\nethost.dll</NetHostPathx64>
+    <NetHostPathx86>C:\Program Files (x86)\dotnet\packs\Microsoft.NETCore.App.Host.win-x86\3.1.0\runtimes\win-x86\native\nethost.dll</NetHostPathx86>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>NetHostPathx64=LR"($(NetHostPathx64))";NetHostPathx86=LR"($(NetHostPathx86))";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="NetHostPathx64">
+      <Value>$(NetHostPathx64)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="NetHostPathx86">
+      <Value>$(NetHostPathx86)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
