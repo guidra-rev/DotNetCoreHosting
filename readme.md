@@ -89,7 +89,7 @@ In order to locate `hostfxr.dll`, you will need a method from `nethost.dll`. `ne
 - 32bit `C:\Program Files (x86)\dotnet\packs\Microsoft.NETCore.App.Host.win-x86\3.1.0\runtimes\win-x86\native`
 - 64bit `C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Host.win-x64\3.1.0\runtimes\win-x64\native`
 
-I defined a macro called $(NetHostPath) to hold the folder path, each configuration has it's own value. [See here](https://docs.microsoft.com/en-us/cpp/build/working-with-project-properties?view=vs-2019#user-defined-macros) on how to define user macros.
+These path are defined with [user macros](https://docs.microsoft.com/en-us/cpp/build/working-with-project-properties?view=vs-2019#user-defined-macros), then made accessible programatically with the "Preprocessor definitions" option. 
 
 ## Debugging
 
