@@ -76,7 +76,7 @@ namespace WinFormsApp
 
 # Remarks
 
-The following files were copied from the [dot net runtime repo](https://github.com/dotnet/runtime) :
+The following files were copied from the [dotnet runtime repo](https://github.com/dotnet/runtime) :
 - [`coreclr_delegates.h`](https://github.com/dotnet/runtime/blob/4f9ae42d861fcb4be2fcd5d3d55d5f227d30e723/src/installer/corehost/cli/coreclr_delegates.h)
 - [`hostfxr.h`](https://github.com/dotnet/runtime/blob/4f9ae42d861fcb4be2fcd5d3d55d5f227d30e723/src/installer/corehost/cli/hostfxr.h)
 - [`error_codes.h`](https://github.com/dotnet/runtime/blob/4f9ae42d861fcb4be2fcd5d3d55d5f227d30e723/src/installer/corehost/error_codes.h) 
@@ -86,8 +86,10 @@ The following files were copied from the [dot net runtime repo](https://github.c
 
 In order to locate `hostfxr.dll`, you will need a method from `nethost.dll`. `nethost.dll` is shipped with the SDK, after installation it can be found in these directories :
 
-- 32bit `C:\Program Files (x86)\dotnet\packs\Microsoft.NETCore.App.Host.win-x86\3.1.0\runtimes\win-x86\native`
-- 64bit `C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Host.win-x64\3.1.0\runtimes\win-x64\native`
+- 32bit `C:\Program Files (x86)\dotnet\packs\Microsoft.NETCore.App.Host.win-x86\3.1.2\runtimes\win-x86\native`
+- 64bit `C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Host.win-x64\3.1.2\runtimes\win-x64\native`
+
+You might need to adjust the paths according to your version.
 
 These path are defined with [user macros](https://docs.microsoft.com/en-us/cpp/build/working-with-project-properties?view=vs-2019#user-defined-macros), then made accessible programatically with the "Preprocessor definitions" option. 
 
